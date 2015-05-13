@@ -1,0 +1,29 @@
+// Solution to the second problem on Project Euler https://projecteuler.net/problem=3
+
+
+// Function checks if a number is prime and returns either true or false.
+
+var isPrime = function(input){
+	for(var i = 2; i < input; i++){
+		if(input % i === 0){
+			return False;
+		}
+	}
+	return True;
+};
+
+/* Function starts with large number and decrements it to find the maximum
+prime factor. */
+
+var maxPrime = function(input){
+
+	var divisor = input - 1;
+
+	while(divisor > 1){
+		if(input % divisor === 0 && isPrime(divisor)){
+			return divisor;
+		}
+		divisor--;
+	}
+	return input;
+}

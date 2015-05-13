@@ -5,12 +5,12 @@
 /* Function uses a for loop iterates over every integer from 1 to 999 to determine if it is divisible
 by 3 or 5. If it is, it will add that integer to the sum. If not, it will skip to the next integer. */
 
-var findSum = function() {
+var findSum = function(){
 	var sum = 0;
-	for (var i = 1; i < 1000; i++) {
+	for(var i = 1; i < 1000; i++){
 		if (i % 3 === 0) {
 			sum += i;
-		} else if (i % 5 === 0) {
+		} else if (i % 5 === 0){
 			sum += i;
 		}
 	}
